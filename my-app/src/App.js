@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import check from './Change.js'
+import check from './change.js'
 
 class App extends React.Component{
   constructor(){
