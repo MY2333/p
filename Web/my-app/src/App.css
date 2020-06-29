@@ -29,6 +29,11 @@
   color:darkblue;
 }
 
+.App-h1:hover{
+  transition: 2s;
+  color:darkcyan;
+}
+
 .App-ul:nth-child(3){
   margin-left: 40rem;
   margin-top: 1rem;
