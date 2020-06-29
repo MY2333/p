@@ -1,0 +1,55 @@
+.App {
+  background-color: #d4e2ff;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  padding-top: 15rem;
+  padding-left: 50rem;
+  padding-bottom: 5rem;
+  font-size: 3rem;
+  color: rgb(255, 174, 0);
+}
+
+.App-h1{
+  text-align: center;
+  color:darkblue;
+}
+
+.App-ul:nth-child(3){
+  margin-left: 50rem;
+  margin-top: 1rem;
+  padding-bottom: 7rem;
+  text-align: left;
+  font-size: 2rem;
+  color:black;
+}
+
+.App-ul:nth-child(5){
+  margin-left: 50rem;
+  margin-top: 1rem;
+  padding-bottom: 20rem;
+  text-align: left;
+  font-size: 2rem;
+  color:black;
+}
+.fixed:first-child{
+  width: 20rem;
+  height: 50rem;
+  position: fixed;
+  margin-top: 25rem;
+  margin-left: 20rem;
+}
