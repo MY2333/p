@@ -17,9 +17,9 @@
   display: flex;
   flex-direction: column;
   align-items: left;
-  padding-top: 15rem;
-  padding-left: 50rem;
-  padding-bottom: 5rem;
+  padding-top: 10rem;
+  padding-left: 40rem;
+  padding-bottom: 4rem;
   font-size: 3rem;
   color: rgb(255, 174, 0);
 }
@@ -30,7 +30,7 @@
 }
 
 .App-ul:nth-child(3){
-  margin-left: 50rem;
+  margin-left: 40rem;
   margin-top: 1rem;
   padding-bottom: 7rem;
   text-align: left;
@@ -39,7 +39,7 @@
 }
 
 .App-ul:nth-child(5){
-  margin-left: 50rem;
+  margin-left: 40rem;
   margin-top: 1rem;
   padding-bottom: 20rem;
   text-align: left;
@@ -50,6 +50,6 @@
   width: 20rem;
   height: 50rem;
   position: fixed;
-  margin-top: 25rem;
-  margin-left: 20rem;
+  margin-top: 15rem;
+  margin-left: 10rem;
 }
