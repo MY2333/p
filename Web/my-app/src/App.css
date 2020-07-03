@@ -14,14 +14,15 @@
 }
 
 .App-header {
-  display: flex;
+  display:flex;
   flex-direction: column;
   align-items: left;
-  padding-top: 15rem;
-  padding-left: 50rem;
+  padding-top: calc(20% - 100px);
+  padding-left: calc(50% - 100px);
   padding-bottom: 5rem;
   font-size: 3rem;
   color: rgb(255, 174, 0);
+  background-color: darkkhaki;
 }
 
 .App-h1{
@@ -30,6 +31,7 @@
 }
 
 .App-ul:nth-child(3){
+  display: 60%;
   margin-left: 50rem;
   margin-top: 1rem;
   padding-bottom: 7rem;
@@ -46,10 +48,12 @@
   font-size: 2rem;
   color:black;
 }
-.fixed:first-child{
-  width: 20rem;
-  height: 50rem;
+.App-fixed:first-child{
+  width: 20%;
+  height: calc(50% - 100px);
   position: fixed;
-  margin-top: 25rem;
-  margin-left: 20rem;
+  margin-top: 10%;
+  margin-left: 10%;
+  background-image: linear-gradient(30deg, white, black);
+  display: 0.4;
 }
