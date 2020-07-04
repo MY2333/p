@@ -14,7 +14,7 @@
 }
 
 .App-header {
-  display:flex 0.6;
+  display: 1;
   flex-direction: column;
   align-items: left;
   padding-top: calc(20% - 100px);
@@ -34,8 +34,8 @@
   color: antiquewhite;
 }
 .App-ul:nth-child(3){
-  display: flex 0.6;
-  margin-left: 50rem;
+  display: 1;
+  margin-left: 40%;
   margin-top: 1rem;
   padding-bottom: 7rem;
   text-align: left;
@@ -44,7 +44,7 @@
 }
 
 .App-ul:nth-child(5){
-  margin-left: 50rem;
+  margin-left: 40%;
   margin-top: 1rem;
   padding-bottom: 20rem;
   text-align: left;
@@ -54,7 +54,7 @@
 
 .App-fixed:first-child{
   width: 20%;
-  height: calc(50% - 100px);
+  height: calc(50% - 50px);
   position: fixed;
   margin-top: 10%;
   margin-left: 10%;
