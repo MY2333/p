@@ -1,74 +1,76 @@
 .App {
-  background-color: #d4e2ff;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  display: 1;
+  display: flex;
   flex-direction: column;
-  align-items: left;
-  padding-top: calc(20% - 100px);
-  padding-left: calc(50% - 100px);
-  padding-bottom: 5rem;
+  width: 100%;
+  min-height: 1200px;
+  background-color: rgb(247, 232, 206);
+}
+
+.left {
+  flex: 30%;
+  padding-top: 20%;
+  padding-left: 15%;
+}
+
+.pic {
+  position: static;
   font-size: 3rem;
-  color: rgb(255, 174, 0);
+  color: black;
 }
 
-.App-h1{
-  text-align: center;
-  font-size: 2rem;
-  color:darkblue;
-}
-.App-h1:hover{
-  transition: 2s;
-  color: antiquewhite;
-}
-.App-ul:nth-child(3){
-  display: 1;
-  margin-left: 40%;
-  margin-top: 1rem;
-  padding-bottom: 7rem;
-  text-align: left;
-  font-size: 2rem;
-  color:black;
+.right {
+  flex: 50%;
 }
 
-.App-ul:nth-child(5){
-  margin-left: 40%;
-  margin-top: 1rem;
-  padding-bottom: 20rem;
-  text-align: left;
-  font-size: 2rem;
-  color:black;
+.right-header {
+  padding-top: 30%;
+  font-size: 3rem;
 }
 
-.App-fixed:first-child{
-  width: 20%;
-  height: calc(50% - 50px);
-  position: fixed;
-  margin-top: 10%;
-  margin-left: 10%;
-  background-image: linear-gradient(30deg, white, black);
-  display: flex 0.4;
-  flex-direction: column;
+.App-ul {
+  font-size: 1.5rem;
+  font-style: italic;
+  padding-bottom: 5%;
+  padding-top: 3%;
 }
-@media screen and(min-width: 720px){
-  .App-fixed:first-child{
-    flex: 1;
-    flex-direction: column;
+
+.bot{
+  flex: 20%;
+  background-color: rgb(247, 232, 206);
+  height: 150px;
+}
+
+.bot-header {
+  padding-top: 3%;
+  padding-left: 5%;
+  font-size: 2rem;
+}
+
+.inf {
+  padding-left: 10%;
+  font-size: 1.5rem;
+}
+
+@media screen and (min-width: 480px) {
+  .App{
+    flex-direction: row;
+    background-image: linear-gradient(to right,black, white);
   }
-  .App-header{
-    flex: 1;
-    flex-direction: column;
+  .left{
+    flex: 40%;
+  }
+
+  .pic{
+    position: fixed;
+    color: white;
+  }
+
+  .right{
+    flex: 50%;
+  }
+
+  .bot{
+    width:100%;
+    height: 300px;
   }
 }
