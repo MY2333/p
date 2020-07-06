@@ -1,7 +1,44 @@
 import React from 'react';
 import './App.css';
+import check from './Check.js'
 
-function App() {
+class App extends React.Component{
+  constructor(){
+    super();
+    this.state = {
+      count: 0,
+      message: "^_^"
+    }
+  }
+  
+  componentWillMount() {
+    console.log("WillMount");
+  }
+
+
+
+  componentWillReceiveProps() {
+    console.log("Props");
+  }
+
+  componentWillUpdate() {
+    console.log("WillUpdate");
+  }
+
+  componentDidUpdate() {
+    console.log("Updated");
+  }
+
+  render(){
+    console.log("Render");
+    const { count, message }= this.state;
+    const flag = check(count);
+    var a = null;
+    if(flag === true){
+      a = "QwQ";
+    }else{
+      a = "o(^_^)o";
+    }
   return (
     <div>
       <div className="App">
@@ -10,8 +47,9 @@ function App() {
             <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" 
              alt="test"/>
             <p>
-              <strong>Margaret Yao</strong>
+              <strong>Margaret Yao</strong> {message}
             </p>
+            <button onClick={()=> this.setState({count: count+1, message:a})}>Change</button>
           </div>
         </div>
         <div className="right">
@@ -40,5 +78,5 @@ function App() {
     </div>
   );
 }
-
+}
 export default App;

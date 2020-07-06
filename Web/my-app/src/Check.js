@@ -1,24 +1,16 @@
-import React from 'react';
-import './App.css';
+import PropTypes from 'prop-types';
 
-class Check extends React.Component{
-    render(){
-        const {count} = this.props;
-        if(count%2===0){
-            return(
-                <div>
-                    <p>^_^</p>
-                </div>
-            )
-        }
-        return(
-            <div>
-                <p>QwQ</p>
-            </div>
-        )
-    }
-  }
-  
-  
-  export default check;
-  
+function check(count){
+  if(count%2===0){
+    return true
+  }return false
+}
+check.propTypes = {
+  count: PropTypes.number
+};
+
+check.defaultProps = {
+  count: 0
+};
+
+export default check;

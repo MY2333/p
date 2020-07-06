@@ -7,13 +7,31 @@ class App extends React.Component{
   constructor(){
     super();
     this.state = {
-      count: 0,
+      count: null,
       message: "^_^"
     }
   }
   
-  render(){
+  componentWillMount() {
+    console.log("WillMount");
+  }
 
+
+
+  componentWillReceiveProps() {
+    console.log("Props");
+  }
+
+  componentWillUpdate() {
+    console.log("WillUpdate");
+  }
+
+  componentDidUpdate() {
+    console.log("Updated");
+  }
+
+  render(){
+    console.log("Render");
     const { count, message }= this.state;
     const flag = check(count);
     var a = null;
