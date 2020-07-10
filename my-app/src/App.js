@@ -59,4 +59,13 @@ class App extends React.Component{
   }
 }
 
-export default App;
+const mapStateToProps = ({ sampleReducer }) => ({
+  counterVal: sampleReducer
+});
+
+const mapDispatchToProps = {
+  sampleAction,
+ };
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
