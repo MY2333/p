@@ -1,15 +1,7 @@
 import React from 'react';
 import './App.css';
-import check from './Check.js'
 
 class App extends React.Component{
-  constructor(){
-    super();
-    this.state = {
-      count: 0,
-      message: "^_^"
-    }
-  }
   
   componentWillMount() {
     console.log("WillMount");
@@ -31,40 +23,31 @@ class App extends React.Component{
 
   render(){
     console.log("Render");
-    const { count, message }= this.state;
-    const flag = check(count);
-    var a = null;
-    if(flag === true){
-      a = "QwQ";
-    }else{
-      a = "o(^_^)o";
-    }
   return (
     <div>
       <div className="App">
         <div className="left">
           <div className="pic">
-            <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" 
-             alt="test"/>
+          <img src="https://i.ibb.co/Y0sG35T/514910852025641237.jpg" height="120" width="100" alt="M"/>
             <p>
-              <strong>Margaret Yao</strong> {message}
+              <strong>Margaret Yao</strong> 
             </p>
-            <button onClick={()=> this.setState({count: count+1, message:a})}>Change</button>
           </div>
         </div>
         <div className="right">
-         <header class="right-header">
+          <div class="right-header"><header>
             Background
           </header>
           <ul className="App-ul">
             <li>Second year student at UofT</li>
-            <li>Major: Computer Science</li>
-          </ul>
-          <header className="right-header">Experience</header>
+            <li>Computer Science</li>
+            <li>Mathmatics</li>
+          </ul></div>
+          <div className="right-header"><header>Experience</header>
           <ul className="App-ul">
-            <li>1234</li>
-            <li></li>
-          </ul>
+            <li>Computer Science Club President in St. Joseph College in 2019</li>
+            <li>Teach in Wells Academy</li>
+          </ul></div>
         </div>
       </div>
       <div className="bot">
