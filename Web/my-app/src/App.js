@@ -55,7 +55,7 @@ class App extends React.Component{
           <strong>Contact</strong>
         </header>
         <p className="inf">
-          email: <a href="mailto:yaoxinyv@gmail.com">yaoxinyv@gmail.com</a>
+           <a href="mailto:yaoxinyv@gmail.com">email</a>
         </p>
       </div>
     </div>

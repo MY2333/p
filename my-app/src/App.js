@@ -3,13 +3,13 @@ import logo from './logo.svg';
 import './App.css';
 import check from './change';
 import { count_increase } from './action/SampleAction.js';
+import axios from 'axios';
 
 class App extends React.Component{
   constructor(props){
     super(props);
-    this.state = { counter: 0};
+    this.state = { counter: 0, weather: null};
   }
-  
   componentWillMount() {
     console.log("WillMount");
   }
@@ -34,10 +34,25 @@ class App extends React.Component{
     this.setState({counter: this.state.counter+ 1});
     count_increase(this.state.counter);
   }
+  
+  getWeather = () => {
+    const that = this;
+    axios.get('https://api.openweathermap.org/data/2.5/weather?q=Toronto&appid=a97f9aa187acc84f2e13a9ba46dfc714')
+    .then(function (res) {
+      // handle success
+      console.log(res);
+      const weatherString = `${res.data.weather[0].main} ${res.data.weather[0].description}`;
+      that.setState({weather: weatherString})
+    })
+    .catch(function (error) {
+      // handle error
+      console.log(error);
+    })
+  }
 
   render(){
     console.log("Render");
-    const { counter }= this.state;
+    const { counter, weather }= this.state;
     const flag = check(counter);
     var a = null;
     if(flag === true){
@@ -53,19 +68,14 @@ class App extends React.Component{
             Nice to see you {a}.
           </p>
           <button onClick={()=> this.increase()}>Change { counter }</button>
+          <div>Toronto: {weather}</div>
+          <div onClick={()=>this.getWeather() }>change weather</div>
         </header>
       </div>
     );
   }
 }
 
-const mapStateToProps = ({ sampleReducer }) => ({
-  counterVal: sampleReducer
-});
-
-const mapDispatchToProps = {
-  sampleAction,
- };
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default App;

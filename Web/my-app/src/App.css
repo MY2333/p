@@ -2,13 +2,13 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  min-height: 1100px;
+  min-height: 1000px;
   background-color: rgb(247, 232, 206);
 }
 
 .left {
   flex: 30%;
-  padding-top: 15%;
+  padding-top: 10%;
   padding-left: 15%;
 }
 
