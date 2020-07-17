@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  min-height: 1000px;
+  min-height: 1500px;
   background-color: rgb(247, 232, 206);
 }
 
@@ -14,8 +14,12 @@
 
 .pic {
   position: absolute;
-  font-size: 3rem;
+  font-size: 1rem;
   color: black;
+}
+
+.name {
+  font-size: 3rem;
 }
 
 .right {
@@ -32,6 +36,12 @@
   background-color: white;
   margin-top: 30%;
   font-size: 3rem;
+}
+.right-header:nth-child(3){
+  background-color: black;
+  color: aliceblue;
+  margin-top: 30%;
+  font-size: 2rem;
 }
 .App-ul {
   font-size: 1.5rem;
@@ -69,6 +79,11 @@
   .pic{
     position: fixed;
     color: white;
+    font-size: 1rem;
+  }
+
+  .name {
+    font-size: 3rem;
   }
 
   .right{
@@ -79,6 +94,10 @@
     color:black;
   }
   .right-header:nth-child(2){
+    background-color:rgba(0, 128, 0, 0);
+    color:black;
+  }
+  .right-header:nth-child(3){
     background-color:rgba(0, 128, 0, 0);
     color:black;
   }
