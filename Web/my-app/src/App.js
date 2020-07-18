@@ -14,7 +14,7 @@ class App extends React.Component{
     }
   }
   componentWillMount() {
-    //this.getQuote()
+    this.getQuote()
     console.log("WillMount");
   }
 
@@ -74,7 +74,7 @@ class App extends React.Component{
             <p className="name">
               <strong>Margaret Yao</strong> 
             </p>
-          <p><i>{quote} quote-- {author}</i></p>
+          <p><i>{quote} -- {author}</i></p>
           </div>
         </div>
         <div className="right">
