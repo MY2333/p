@@ -4,6 +4,10 @@ import './App.css';
 import check from './change';
 import { count_increase } from './action/SampleAction.js';
 import axios from 'axios';
+import TestComponent from './TestComponent';
+import { sampleAction } from './actions/SampleAction'
+import { connect } from 'react-redux';
+import weatherApi from './api/weatherApi';
 
 class App extends React.Component{
   constructor(props){
@@ -50,32 +54,27 @@ class App extends React.Component{
     })
   }
 
-  render(){
-    console.log("Render");
-    const { counter, weather }= this.state;
-    const flag = check(counter);
-    var a = null;
-    if(flag === true){
-      a = "QwQ";
-    }else{
-      a = "o(^_^)o";
-    }
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Nice to see you {a}.
-          </p>
-          <button onClick={()=> this.increase()}>Change { counter }</button>
-          <div>Toronto: {weather}</div>
-          <div onClick={()=>this.getWeather() }>change weather</div>
-        </header>
-      </div>
-    );
-  }
+  render(){const { counter  } = this.state;
+  const { sampleState} = this.props.counterVal;
+  const date = new Date();
+  return(
+  <div className="App">
+    <header className="App-header">
+      {/* <div onClick={() => this.reset()}>button</div>
+      <div>Receiver in Parent: {this.state.counter}</div> */}
+      <div>Weather in Toronto is:{sampleState}</div>
+      <div onClick={() => this.onBtnClicked()}>Click to get weather :)</div>
+      {/* <TestComponent /> */}
+    </header>
+
+  </div>
+  );
+}
 }
 
+const mapStateToProps = ({ sampleReducer }) => ({
+counterVal: sampleReducer
+});
 
 
-export default App;
+export default connect(mapStateToProps, {sampleAction})(App);

@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import * as configureStore from './store/configureStore.jsx';
+
+const store = configureStore.configure();
 
 ReactDOM.render(
   <React.StrictMode>

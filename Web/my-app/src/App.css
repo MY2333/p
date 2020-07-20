@@ -51,6 +51,7 @@
 }
 
 .bot{
+  flex-direction: column;
   flex: 20%;
   background-color: rgb(247, 247, 175);
   height: 150px;
