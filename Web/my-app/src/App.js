@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import axios from 'axios';
-import { sampleAction } from './actions/sampleAction';
+import { sampleAction } from './actions/sampleAction'
 import { connect } from 'react-redux';
 
 

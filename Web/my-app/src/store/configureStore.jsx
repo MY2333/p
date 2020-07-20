@@ -1,5 +1,5 @@
 import * as redux from 'redux';
-import {sampleReducer} from '../reducers/SampleReducer';
+import {sampleReducer} from '../reducers/sampleReducer';
 import thunk from 'redux-thunk';
 
 export const configure = () => {
