@@ -7,12 +7,10 @@ class App extends React.Component{
     super(props);
   }
   render(){
-  const date = new Date();
   return(
   <div className="App">
     <header className="App-header">
       <Router/>
-
     </header>
 
   </div>

@@ -5,7 +5,10 @@ import {
     Route,
     Switch,
   } from "react-router-dom";
-import pageA from './page1';
+import PageA from './PageA';
+import PageB from './PageB';
+import HomePage from './Home';
+import NotFound from './NotFound';
 
 class Router extends React.Component {
     constructor(){
@@ -15,12 +18,27 @@ class Router extends React.Component {
         return(
             <div>
                 <ul>
-                    <Link to="/">page1</Link>
+                    <li><Link to="/">HomePage</Link></li>
+                    <li><Link to="/PageA">page1</Link></li>
+                    <li><Link to="/PageB">page2</Link></li>
+                    <li><Link to="/NotFound">404</Link></li>
                 </ul>
                 <hr />
+                {
+
+                }
                     <Switch>
                         <Route exact path="/">
-                            <pageA />
+                            <HomePage />
+                        </Route>
+                        <Route path="/PageA">
+                            <PageA />
+                        </Route>
+                        <Route path="/PageB">
+                            <PageB />
+                        </Route>
+                        <Route path="/NotFound">
+                            <NotFound />
                         </Route>
 
                   </Switch>

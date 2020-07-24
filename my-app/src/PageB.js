@@ -1,11 +1,12 @@
 import React from 'react';
 import './App.css';
 
-class pageA extends React.Component{
+class PageB extends React.Component{
     render(){
         console.log("yes");
         return (
-            <div className = "App">page1</div>
+            <div className = "App">page2</div>
         )
     }
 }
+export default PageB;
