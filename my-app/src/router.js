@@ -8,7 +8,10 @@ import {
 import PageA from './PageA';
 import PageB from './PageB';
 import HomePage from './Home';
-import NotFound from './NotFound';
+
+const Error = ({ location }) => (
+    <p>404</p>
+)
 
 class Router extends React.Component {
     constructor(){
@@ -37,9 +40,7 @@ class Router extends React.Component {
                         <Route path="/PageB">
                             <PageB />
                         </Route>
-                        <Route path="/NotFound">
-                            <NotFound />
-                        </Route>
+                        <Route component={Error} />
 
                   </Switch>
                 </div>

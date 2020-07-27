@@ -1,12 +1,11 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import './App.css';
 
-class PageA extends React.Component{
-    render(){
-        console.log("yes");
-        return (
-            <div className = "App">page1</div>
-        )
-    }
+
+const PageA = (props) => {
+    const [smile, setSmile] = useState("^_^");
+    return (
+        <div className = "App" onClick={() => setSmile("o(^_^)o")}>page1{smile}</div>
+    )
 }
 export default PageA;
