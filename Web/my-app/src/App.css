@@ -16,6 +16,7 @@
   position: absolute;
   font-size: 1rem;
   color: black;
+  width: 50%;
 }
 
 .name {
@@ -81,6 +82,8 @@
     position: fixed;
     color: white;
     font-size: 1rem;
+    width: 25%;
+    word-break: break-all;
   }
 
   .name {

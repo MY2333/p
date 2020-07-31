@@ -74,14 +74,14 @@ class App extends React.Component{
     return (
       <div>
         <div className="App">
-          <div className="left">
+          <div className="left" contenteditable="true">
             <div className="pic">
               <img src="./Ma.jpg" height="120" width="100" alt="M"/>
               <p className="name">
                 <strong>Margaret Yao</strong> 
               </p>
-              <p>
-                <i>{quote} -- {author}</i>
+              <p className='quote'>
+                <i>{quote} -- {author}aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</i>
               </p>
             </div>
           </div>
